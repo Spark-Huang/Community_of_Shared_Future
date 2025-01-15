@@ -1,4 +1,4 @@
-from mcs.main import MedicalCoderSwarm
+from mcs.main import JusticeLeague
 
 if __name__ == "__main__":
     # Example patient case
@@ -13,7 +13,7 @@ if __name__ == "__main__":
     
     """
 
-    swarm = MedicalCoderSwarm(
+    swarm = JusticeLeague(
         patient_id="323u29382938293829382382398",
         max_loops=1,
         output_type="json",

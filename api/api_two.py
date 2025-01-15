@@ -27,7 +27,7 @@ from opentelemetry.instrumentation.fastapi import FastAPIInstrumentor
 # from opentelemetry.instrumentation.sqlite3 import SQLite3Instrumentor
 from prometheus_client import Counter, Histogram
 import uvicorn
-from mcs.main import MedicalCoderSwarm
+from mcs.main import JusticeLeague
 
 # Configure structured logging
 logger = structlog.get_logger()
@@ -99,7 +99,7 @@ db_pool = DatabasePool(db_path, DB_POOL_SIZE)
 
 # Initialize FastAPI app with additional configuration
 app = FastAPI(
-    title="MedicalCoderSwarm API",
+    title="JusticeLeague API",
     version="1.0.0",
     docs_url="/api/docs",
     redoc_url="/api/redoc",
@@ -221,7 +221,7 @@ async def run_medical_coder(
                 request_id=request.headers.get("X-Request-ID"),
             )
 
-            swarm = MedicalCoderSwarm(
+            swarm = JusticeLeague(
                 patient_id=patient_case.patient_id,
                 max_loops=1,
                 patient_documentation="",

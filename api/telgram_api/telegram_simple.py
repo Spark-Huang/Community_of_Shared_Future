@@ -7,7 +7,7 @@ from telegram.ext import (
     ContextTypes,
     filters,
 )
-from mcs import MedicalCoderSwarm
+from mcs import JusticeLeague
 import logging
 from dotenv import load_dotenv
 
@@ -71,7 +71,7 @@ class MedicalBot:
 
         try:
             # Create swarm instance with context
-            swarm = MedicalCoderSwarm(
+            swarm = JusticeLeague(
                 patient_id=str(chat_id),
                 max_loops=1,
                 patient_documentation="",

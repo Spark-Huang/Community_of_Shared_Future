@@ -6,20 +6,20 @@ from datetime import timedelta
 from mcs.main import (
     RAGAPI,
     KeyRotationPolicy,
-    MedicalCoderSwarm,
+    JusticeLeague,
     SecureDataHandler,
 )
 
 
 def test_medical_coder_swarm_initialization():
-    """Test the initialization of MedicalCoderSwarm"""
+    """Test the initialization of JusticeLeague"""
     try:
         # Set up test environment
         os.environ["MASTER_KEY"] = "test_master_key"
         os.environ["OPENAI_API_KEY"] = "test_openai_key"
 
         # Initialize swarm
-        swarm = MedicalCoderSwarm(
+        swarm = JusticeLeague(
             name="Test-Swarm",
             description="Test swarm for unit testing",
             patient_id="test_patient_001",
@@ -35,11 +35,11 @@ def test_medical_coder_swarm_initialization():
         assert swarm.rag_url == "http://test-rag-url"
         assert swarm.user_name == "test_user"
 
-        print("✓ MedicalCoderSwarm initialization test passed")
+        print("✓ JusticeLeague initialization test passed")
         return True
     except AssertionError as e:
         print(
-            f"✗ MedicalCoderSwarm initialization test failed: {str(e)}"
+            f"✗ JusticeLeague initialization test failed: {str(e)}"
         )
         return False
     except Exception as e:
@@ -109,10 +109,10 @@ def test_secure_data_handler():
 
 
 def test_swarm_run():
-    """Test the run method of MedicalCoderSwarm"""
+    """Test the run method of JusticeLeague"""
     try:
         # Initialize swarm
-        swarm = MedicalCoderSwarm(
+        swarm = JusticeLeague(
             name="Test-Run-Swarm",
             patient_documentation="Test patient with symptoms of fever and cough",
             summarization=True,
@@ -137,10 +137,10 @@ def test_swarm_run():
 
 
 def test_batched_run():
-    """Test the batched_run method of MedicalCoderSwarm"""
+    """Test the batched_run method of JusticeLeague"""
     try:
         # Initialize swarm
-        swarm = MedicalCoderSwarm(
+        swarm = JusticeLeague(
             name="Test-Batch-Swarm",
             patient_documentation="Test patient documentation",
         )
@@ -168,7 +168,7 @@ def test_to_dict_serialization():
     """Test the to_dict serialization method"""
     try:
         # Initialize swarm
-        swarm = MedicalCoderSwarm(name="Test-Serialization-Swarm")
+        swarm = JusticeLeague(name="Test-Serialization-Swarm")
 
         # Get dictionary representation
         swarm_dict = swarm.to_dict()

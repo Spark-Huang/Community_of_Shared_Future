@@ -54,7 +54,7 @@ MASTER_KEY="328928402" # your master key for security
 
 ```python
 
-from mcs.main import MedicalCoderSwarm
+from mcs.main import JusticeLeague
 import json
 
 if __name__ == "__main__":
@@ -70,7 +70,7 @@ if __name__ == "__main__":
   
   """
   
-  swarm = MedicalCoderSwarm(patient_id="Patient-001", max_loops=1, patient_documentation="")
+  swarm = JusticeLeague(patient_id="Patient-001", max_loops=1, patient_documentation="")
   
   swarm.run(task=patient_case)
   
@@ -83,7 +83,7 @@ if __name__ == "__main__":
 ```python
 
 import json
-from mcs.main import MedicalCoderSwarm
+from mcs.main import JusticeLeague
 
 if __name__ == "__main__":
     # Extended Example Patient Case
@@ -146,8 +146,8 @@ if __name__ == "__main__":
     - Referral to nephrologist for further evaluation
     """
 
-    # Initialize the MedicalCoderSwarm with the detailed patient case
-    swarm = MedicalCoderSwarm(
+    # Initialize the JusticeLeague with the detailed patient case
+    swarm = JusticeLeague(
         patient_id="Patient-001",
         max_loops=1,
         # patient_documentation=patient_case,
@@ -287,7 +287,7 @@ graph TB
     end
 
     subgraph Core["Core MCS"]
-        MS["MedicalCoderSwarm"]
+        MS["JusticeLeague"]
         AG["AgentRearrange"]
         
         subgraph Agents["Agent Network"]

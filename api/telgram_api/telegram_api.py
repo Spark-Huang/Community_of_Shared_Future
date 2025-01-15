@@ -41,7 +41,7 @@ from telegram.ext import (
     filters,
 )
 
-from mcs import MedicalCoderSwarm
+from mcs import JusticeLeague
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -259,7 +259,7 @@ class DatabaseOps:
 class ContextAwareMedicalSwarm:
     def __init__(self, chat_id: int):
         self.chat_id = chat_id
-        self.swarm = MedicalCoderSwarm(
+        self.swarm = JusticeLeague(
             patient_id=str(chat_id),
             max_loops=1,
             patient_documentation="",

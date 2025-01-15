@@ -11,13 +11,13 @@ from fastapi.responses import JSONResponse
 from loguru import logger
 from pydantic import BaseModel
 
-from mcs import MedicalCoderSwarm
+from mcs import JusticeLeague
 
 load_dotenv()
 
 # Initialize FastAPI app
 app = FastAPI(
-    title="MedicalCoderSwarm API",
+    title="JusticeLeague API",
     version="1.0.0",
     debug=True,
 )
@@ -290,13 +290,13 @@ def run_medical_coder(
     patient_case: PatientCase,
 ):
     """
-    Run the MedicalCoderSwarm on a given patient case.
+    Run the JusticeLeague on a given patient case.
     """
     try:
         logger.info(
-            f"Running MedicalCoderSwarm for patient: {patient_case.patient_id}"
+            f"Running JusticeLeague for patient: {patient_case.patient_id}"
         )
-        swarm = MedicalCoderSwarm(
+        swarm = JusticeLeague(
             patient_id=patient_case.patient_id,
             max_loops=1,
             output_type="all",
@@ -307,7 +307,7 @@ def run_medical_coder(
         output = swarm.run(task=patient_case.case_description)
 
         logger.info(
-            f"MedicalCoderSwarm completed for patient: {patient_case.patient_id}"
+            f"JusticeLeague completed for patient: {patient_case.patient_id}"
         )
 
         agent_outputs = {
@@ -409,18 +409,18 @@ def run_medical_coder_batch(
     batch: BatchPatientCase,
 ):
     """
-    Run the MedicalCoderSwarm on a batch of patient cases.
+    Run the JusticeLeague on a batch of patient cases.
     """
     responses = []
-    logger.info("Running Batched MedicalCoderSwarm")
+    logger.info("Running Batched JusticeLeague")
     logger.info(f"Batch size: {len(batch.cases)}")
 
     for patient_case in batch.cases:
         try:
             logger.info(
-                f"Running Batched MedicalCoderSwarm for patient: {patient_case.patient_id}"
+                f"Running Batched JusticeLeague for patient: {patient_case.patient_id}"
             )
-            swarm = MedicalCoderSwarm(
+            swarm = JusticeLeague(
                 patient_id=patient_case.patient_id,
                 max_loops=1,
                 output_type="all",
@@ -432,7 +432,7 @@ def run_medical_coder_batch(
             output = swarm.run(task=patient_case.case_description)
 
             logger.info(
-                f"MedicalCoderSwarm completed for patient: {patient_case.patient_id}"
+                f"JusticeLeague completed for patient: {patient_case.patient_id}"
             )
 
             agent_outputs = {

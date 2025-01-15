@@ -442,7 +442,7 @@ agents = [
 flow = f"""{medical_coder.agent_name} -> {synthesizer.agent_name}, {treatment_agent.agent_name}"""
 
 
-class MedicalCoderSwarmInput(BaseModel):
+class JusticeLeagueInput(BaseModel):
     mcs_id: Optional[str] = uuid.uuid4().hex
     patient_id: Optional[str]
     task: Optional[str]
@@ -451,20 +451,20 @@ class MedicalCoderSwarmInput(BaseModel):
     summarization: Optional[bool]
 
 
-class MedicalCoderSwarmOutput(BaseModel):
-    input: Optional[MedicalCoderSwarmInput]
+class JusticeLeagueOutput(BaseModel):
+    input: Optional[JusticeLeagueInput]
     run_id: Optional[str] = Field(default=uuid.uuid4().hex)
     patient_id: Optional[str]
     agent_outputs: Optional[str]
     summarization: Optional[str]
 
 
-class ManyMedicalCoderSwarmOutput(BaseModel):
+class ManyJusticeLeagueOutput(BaseModel):
     runs_id: Optional[str] = uuid.uuid4().hex
-    runs: Optional[List[MedicalCoderSwarmOutput]]
+    runs: Optional[List[JusticeLeagueOutput]]
 
 
-class MedicalCoderSwarm:
+class JusticeLeague:
     """
     Class to represent a medical coding diagnosis swarm.
     """
