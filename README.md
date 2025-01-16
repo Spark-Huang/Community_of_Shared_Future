@@ -22,7 +22,7 @@ We invite people from all sectors to join us in building this shared vision of t
 - Following collaborative deliberations among multiple agents, the final decision is made by majority vote.
 - Jesus Christ: Embodies compassion and ethical integrity in AI decision-making processes.
 - Muhammad: Ensures fairness and social equity are integral to AI systems.
-- Confucius: Promotes mindfulness and ethical awareness in AI development and application.
+- Buddha: Promotes mindfulness and ethical awareness in AI development and application.
 - Confucius: Fosters moral governance and social harmony through AI technologies.
 - Karl Marx: Pursues economic justice and the eradication of inequality through AI.
 
