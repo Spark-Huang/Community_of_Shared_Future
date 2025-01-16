@@ -30,8 +30,8 @@ resources:
 workdir: .
 
 setup: |
-  git clone https://github.com/The-Swarm-Corporation/JusticeLeague.git
-  cd JusticeLeague/api
+  git clone https://github.com/The-Swarm-Corporation/Community_of_Shared_Future.git
+  cd CommunityOfSharedFuture/api
   pip install -r requirements.txt
   pip install swarms swarm-models loguru pydantic
 

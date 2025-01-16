@@ -31,7 +31,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.future import select
 from sqlalchemy.orm import relationship
 
-from mcs.main import JusticeLeague
+from mcs.main import CommunityOfSharedFuture
 
 # Configure logging
 logger.add(
@@ -206,7 +206,7 @@ class DatabaseOps:
 class ContextAwareMedicalSwarm:
     def __init__(self, user_id: str):
         self.user_id = user_id
-        self.swarm = JusticeLeague(
+        self.swarm = CommunityOfSharedFuture(
             patient_id=user_id, max_loops=1, patient_documentation=""
         )
 

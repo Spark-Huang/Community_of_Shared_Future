@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from mcs.main import JusticeLeague  # noqa: E402
+from mcs.main import CommunityOfSharedFuture  # noqa: E402
 from mcs.api_client import (  # noqa: E402
     PatientCase,
     QueryResponse,
@@ -12,7 +12,7 @@ from mcs.api_client import (  # noqa: E402
 )  # noqa: E402
 
 __all__ = [
-    "JusticeLeague",
+    "CommunityOfSharedFuture",
     "PatientCase",
     "QueryResponse",
     "MCSClient",

@@ -29,13 +29,13 @@ We invite people from all sectors to join us in building this shared vision of t
 
 ### Technical Features
 
-- Support for RAG (Retrieval-Augmented Generation) API
+- Support for RAG (Retrieval-Augmented Generation) API  
 This feature enhances text generation by integrating relevant information from a database or corpus through the RAG API.
-- Comprehensive Logging and Telemetry Features
+- Comprehensive Logging and Telemetry Features  
 Ensures thorough monitoring and analysis of system operations through extensive logging and data collection.
-- Scalable Batch Processing Capabilities
+- Scalable Batch Processing Capabilities  
 Efficiently handles batch processing tasks and scales to meet increasing data or user demands.
-- Configurable Output Formats and Storage Options
+- Configurable Output Formats and Storage Options  
 Allows users to customize data output formats and storage solutions to suit various needs.
 
 
