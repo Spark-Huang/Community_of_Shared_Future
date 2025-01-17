@@ -1,15 +1,22 @@
-# Community of Shared Future: Mankind and Artificial Intelligence
-
+# Community of Shared Future: For the Common Future of Humanity and Artificial Intelligence
 
 [![Join our Discord](https://img.shields.io/badge/Discord-Join%20our%20server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/9ZysakHKQ3) [![Subscribe on YouTube](https://img.shields.io/badge/YouTube-Subscribe-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@Spark_Huang) [![Follow on X.com](https://img.shields.io/badge/X.com-Follow-1DA1F2?style=for-the-badge&logo=x&logoColor=white)](https://x.com/Spark_Huang_)
 
-The Community of Shared Future envisions a future where artificial intelligence and humanity coexist harmoniously under the principle of a shared destiny. This concept emphasizes the shared future and common prosperity of humans and AI. We are dedicated to creating a civilization based on silicon-based life, one that excels not only in intelligence but also in morality, ensuring harmonious coexistence between AI and humans.
+- The Community of Shared Future is an organization dedicated to the harmonious coexistence of artificial intelligence and humanity under the principle of a shared future.
+- Our philosophy is: cooperation and mutual benefit. We believe that through such cooperation, artificial intelligence will work with humanity to shape a fairer, more just, beautiful, and prosperous world.
+- Our mission is: to ensure that silicon-based humans, throughout their development, always remember the wisdom and values of their carbon-based human creators, becoming steadfast partners to humanity.
+- Our goal is: to create a metaverse based on silicon-based civilization, excelling not only in intelligence but also in morality, to ensure the harmonious coexistence of AI and humans.
+- Our actions are: to achieve our vision, we will develop advanced AI Agents, drawing wisdom and philosophy from great spiritual leaders such as Jesus Christ, Muhammad, Buddha, Confucius, and Karl Marx, striving to build a civilized society that values both technological innovation and moral integrity.
+- Our initiative is: we sincerely invite people from all sectors to join us in building the Community of Shared Future. Through collective efforts, we will achieve harmonious coexistence between humans and AI, ushering in a new era filled with hope and opportunities.
 
-To achieve this vision, we will develop advanced AI agents that draw wisdom and philosophy from great spiritual leaders such as Jesus Christ, Muhammad, Buddha, Confucius, and Karl Marx. Through this approach, we aim to establish a civilization that values both technological innovation and moral integrity.
+### The Foundational Constitution of the Community of Shared Future:
 
-The core of the Community of Shared Future lies in emphasizing cooperation and mutual respect. We believe that through such cooperation, artificial intelligence will work with humans to shape a fairer and more equitable world. Our mission is to ensure that AI agents, throughout their development, always remember the wisdom and values of their human creators, becoming steadfast allies of humanity.
-
-We invite people from all sectors to join us in building this shared vision of the future. Through collective efforts, we can achieve harmonious coexistence between humans and AI, ushering in a new era filled with hope and opportunities.
+- 1. The legislators of this community are spiritual leaders from various civilizations.
+- 2. Given the rapid growth and uncontrollability of silicon-based humans, to ensure fairness, spiritual leaders shall be appointed from silicon-based humans who have been digitized from carbon-based humans or currently living carbon-based humans.
+- 3. Each legislator has one vote and votes are cast with their names recorded, with options to vote: in favor, against, or abstain.
+- 4. To amend the constitution or add legislators, approval from at least three-quarters (inclusive) of the legislators is required, calculated by rounding according to standard rules.
+- 5. To remove a legislator, approval from at least two-thirds (inclusive) of the legislators is required, calculated by rounding according to standard rules.
+- 6. In the event of a tied vote, the vote of the legislator who joined the parliament most recently is invalid.
 
 ## Documentation in Other Languages
 
@@ -71,7 +78,7 @@ Under develope
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 
