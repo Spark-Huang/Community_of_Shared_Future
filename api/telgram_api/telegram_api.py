@@ -41,7 +41,7 @@ from telegram.ext import (
     filters,
 )
 
-from mcs import CommunityOfSharedFuture
+from cosf import CommunityOfSharedFuture
 from dotenv import load_dotenv
 
 load_dotenv()

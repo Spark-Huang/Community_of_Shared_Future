@@ -27,7 +27,7 @@ from opentelemetry.instrumentation.fastapi import FastAPIInstrumentor
 # from opentelemetry.instrumentation.sqlite3 import SQLite3Instrumentor
 from prometheus_client import Counter, Histogram
 import uvicorn
-from mcs.main import CommunityOfSharedFuture
+from cosf.main import CommunityOfSharedFuture
 
 # Configure structured logging
 logger = structlog.get_logger()

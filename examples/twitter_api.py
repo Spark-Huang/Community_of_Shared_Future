@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
 
 class TwitterBot:
     def __init__(self):
-        """Initialize Twitter bot with your mcsswarm app credentials."""
+        """Initialize Twitter bot with your cosfswarm app credentials."""
         self.setup_client()
 
     def setup_client(self):

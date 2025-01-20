@@ -37,7 +37,7 @@ RUN pip install setuptools
 RUN pip install uvicorn
 RUN pip install fastapi
 RUN pip install pydantic
-RUN pip install mcs
+RUN pip install cosf
 RUN pip install cryptography
 RUN pip install uvicorn
 RUN pip install loguru

@@ -7,7 +7,7 @@ from telegram.ext import (
     ContextTypes,
     filters,
 )
-from mcs import CommunityOfSharedFuture
+from cosf import CommunityOfSharedFuture
 import logging
 from dotenv import load_dotenv
 

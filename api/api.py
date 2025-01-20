@@ -11,7 +11,7 @@ from fastapi.responses import JSONResponse
 from loguru import logger
 from pydantic import BaseModel
 
-from mcs import CommunityOfSharedFuture
+from cosf import CommunityOfSharedFuture
 
 load_dotenv()
 

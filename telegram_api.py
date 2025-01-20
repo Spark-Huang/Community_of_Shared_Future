@@ -9,7 +9,7 @@ from telegram.ext import (
     filters,
 )
 from telegram import Update
-from mcs.main import medical_coder
+from cosf.main import medical_coder
 from dotenv import load_dotenv
 
 # Load environment variables

@@ -13,7 +13,7 @@ from tenacity import (
 )
 from urllib3.util.retry import Retry
 
-from mcs.main import patient_id_uu
+from cosf.main import patient_id_uu
 
 
 class PatientCase(BaseModel):
@@ -50,31 +50,31 @@ class QueryResponse(BaseModel):
         arbitrary_types_allowed = True
 
 
-class MCSClientError(Exception):
-    """Base exception for MCS client errors."""
+class CoSFClientError(Exception):
+    """Base exception for CoSF client errors."""
 
     pass
 
 
-class RateLimitError(MCSClientError):
+class RateLimitError(CoSFClientError):
     """Raised when API rate limit is exceeded."""
 
     pass
 
 
-class AuthenticationError(MCSClientError):
+class AuthenticationError(CoSFClientError):
     """Raised when API authentication fails."""
 
     pass
 
 
-class ValidationError(MCSClientError):
+class ValidationError(CoSFClientError):
     """Raised when request validation fails."""
 
     pass
 
 
-class MCSClient:
+class CoSFClient:
     """
     Production-grade client for the Medical Coder Swarm API.
 
@@ -86,19 +86,19 @@ class MCSClient:
     - Rate limit handling
 
     Usage:
-        >>> with MCSClient() as client:
+        >>> with CoSFClient() as client:
         >>>     response = client.run_medical_coder("P123", "Patient presents with...")
     """
 
     def __init__(
         self,
-        base_url: str = "https://mcs-285321057562.us-central1.run.app",
+        base_url: str = "https://cosf-285321057562.us-central1.run.app",
         timeout: int = 500,
         max_retries: int = 3,
-        logger_name: str = "mcs_client",
+        logger_name: str = "cosf_client",
     ):
         """
-        Initialize the MCS client.
+        Initialize the CoSF client.
 
         Args:
             base_url (str): Base URL for the API
@@ -149,7 +149,7 @@ class MCSClient:
             RateLimitError: When rate limit is exceeded
             AuthenticationError: When authentication fails
             ValidationError: When request validation fails
-            MCSClientError: For other API errors
+            CoSFClientError: For other API errors
         """
         try:
             response.raise_for_status()
@@ -163,7 +163,7 @@ class MCSClient:
             elif response.status_code == 422:
                 raise ValidationError(error_msg)
             else:
-                raise MCSClientError(error_msg)
+                raise CoSFClientError(error_msg)
 
     @retry(
         stop=stop_after_attempt(3),
@@ -194,7 +194,7 @@ class MCSClient:
             QueryResponse: Processed case data
 
         Raises:
-            MCSClientError: If the API request fails
+            CoSFClientError: If the API request fails
         """
         logger.info(f"Processing case for patient: {patient_id}")
 
@@ -351,7 +351,7 @@ class MCSClient:
 # # Example usage
 # if __name__ == "__main__":
 #     # Using context manager
-#     with MCSClient() as client:
+#     with CoSFClient() as client:
 #         # Single case processing
 #         try:
 #             response = client.run_medical_coder(
@@ -372,5 +372,5 @@ class MCSClient:
 #             is_healthy = client.health_check()
 #             print(f"API health status: {is_healthy}")
 
-#         except MCSClientError as e:
+#         except CoSFClientError as e:
 #             print(f"An error occurred: {str(e)}")

@@ -1,5 +1,5 @@
 import json
-from mcs import MCSClient
+from cosf import CoSFClient
 
 patient_case = """
     Patient: 45-year-old White Male
@@ -26,6 +26,6 @@ patient_case = """
     - Metformin
 """
 
-with MCSClient() as client:
+with CoSFClient() as client:
     response = client.run_medical_coder("P123", patient_case, True)
     print(json.dumps(response, indent=4))

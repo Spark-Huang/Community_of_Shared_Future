@@ -1,4 +1,4 @@
-from mcs.main import CommunityOfSharedFuture
+from cosf.main import CommunityOfSharedFuture
 
 if __name__ == "__main__":
     # Extended Example Patient Case

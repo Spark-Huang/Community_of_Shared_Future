@@ -9,9 +9,9 @@ from pydantic import BaseModel
 from swarm_models import OpenAIChat
 from swarms import Agent
 from swarms.telemetry.capture_sys_data import log_agent_data
-from mcs.rag_api import ChromaQueryClient
+from cosf.rag_api import ChromaQueryClient
 
-from mcs.security import (
+from cosf.security import (
     KeyRotationPolicy,
     SecureDataHandler,
     secure_data,
@@ -411,16 +411,16 @@ agents = [
 ]
 
 
-class MCSAgentOutputs(BaseModel):
+class CoSFAgentOutputs(BaseModel):
     agent_id: Optional[str] = str(uuid.uuid4().hex)
     agent_name: Optional[str] = None
     agent_output: Optional[str] = None
     timestamp: Optional[str] = time.strftime("%Y-%m-%d %H:%M:%S")
 
 
-class MCSOutput(BaseModel):
+class CoSFOutput(BaseModel):
     run_id: Optional[str] = str(uuid.uuid4().hex)
-    agent_outputs: Optional[List[MCSAgentOutputs]] = None
+    agent_outputs: Optional[List[CoSFAgentOutputs]] = None
     summary: Optional[str]
     timestamp: Optional[str] = time.strftime("%Y-%m-%d %H:%M:%S")
 
@@ -482,7 +482,7 @@ class CommunityOfSharedFuture:
         )
 
         # Output schema
-        self.output_schema = MCSOutput(agent_outputs=[], summary="")
+        self.output_schema = CoSFOutput(agent_outputs=[], summary="")
 
     def rag_query(self, query: str):
         client = ChromaQueryClient(
@@ -512,7 +512,7 @@ class CommunityOfSharedFuture:
 
             # Append output to schema
             self.output_schema.agent_outputs.append(
-                MCSAgentOutputs(
+                CoSFAgentOutputs(
                     agent_name=medical_coder.agent_name,
                     agent_output=medical_coder_output,
                 )
@@ -523,7 +523,7 @@ class CommunityOfSharedFuture:
                 f"From {medical_coder.agent_name} {medical_coder_output}"
             )
             self.output_schema.agent_outputs.append(
-                MCSAgentOutputs(
+                CoSFAgentOutputs(
                     agent_name=synthesizer.agent_name,
                     agent_output=synthesizer_output,
                 )
@@ -534,7 +534,7 @@ class CommunityOfSharedFuture:
                 f"From {synthesizer.agent_name} {synthesizer_output}"
             )
             self.output_schema.agent_outputs.append(
-                MCSAgentOutputs(
+                CoSFAgentOutputs(
                     agent_name=treatment_agent.agent_name,
                     agent_output=treatment_agent_output,
                 )

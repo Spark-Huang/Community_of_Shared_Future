@@ -1,6 +1,6 @@
 fastapi
 pydantic
-mcs
+cosf
 cryptography
 uvicorn
 loguru

@@ -3,7 +3,7 @@ import os
 from datetime import timedelta
 
 # Import the classes and functions to test
-from mcs.main import (
+from cosf.main import (
     RAGAPI,
     KeyRotationPolicy,
     CommunityOfSharedFuture,
