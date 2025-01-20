@@ -27,6 +27,7 @@ swarms = "*"
 loguru = "*"
 swarms-models = "*"
 cryptography = "*"
+swarms-tools = "*"
 
 [tool.poetry.group.lint.dependencies]
 ruff = "^0.1.6"
