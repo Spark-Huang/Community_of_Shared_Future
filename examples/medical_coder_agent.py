@@ -1,4 +1,4 @@
-from cosf.main import medical_coder
+from cosf.main import jesus_christ
 
 
-print(medical_coder.run("test"))
+print(jesus_christ.run("test"))

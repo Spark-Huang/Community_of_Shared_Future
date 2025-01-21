@@ -27,5 +27,5 @@ patient_case = """
 """
 
 with CoSFClient() as client:
-    response = client.run_medical_coder("P123", patient_case, True)
+    response = client.run_jesus_christ("P123", patient_case, True)
     print(json.dumps(response, indent=4))

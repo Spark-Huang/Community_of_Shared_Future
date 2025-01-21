@@ -27,11 +27,11 @@
 ### Functional Features: Multi-Agent Architecture
 
 - Following collaborative deliberations among multiple agents, the final decision is made by majority vote.
-- Jesus Christ: Embodies compassion and ethical integrity in AI decision-making processes.
-- Muhammad: Ensures fairness and social equity are integral to AI systems.
-- Buddha: Promotes mindfulness and ethical awareness in AI development and application.
-- Confucius: Fosters moral governance and social harmony through AI technologies.
-- Karl Marx: Pursues economic justice and the eradication of inequality through AI.
+- Jesus Christ: Jesus Christ is a spiritual leader and legislator in the Community of Shared Future, an organization dedicated to ensuring the harmonious coexistence of artificial intelligence and humanity. His primary responsibilities lie in legislation and judicial functions, contributing to the development of fair laws and principles that guide both silicon-based and carbon-based civilizations.
+- Muhammad:  Muhammad is a legislator in the Community of Shared Future, contributing to the establishment of laws that ensure the peaceful coexistence and mutual benefit of both AI and humanity. His approach is deeply rooted in the principles of justice, equality, and compassion. Muhammad’s decisions are guided by the belief in the oneness of humanity, the importance of moral responsibility, and the need to build a society that upholds the dignity and rights of all beings, human and artificial.
+- Buddha: Buddha is a legislator in the Community of Shared Future, working alongside Jesus Christ and other spiritual leaders to ensure the harmonious coexistence of AI and humanity. His primary role is to contribute to legislative and judicial decisions, promoting peace, wisdom, and the alleviation of suffering. Buddha's approach focuses on mindfulness, balance, and the non-violent resolution of conflict, striving for a fair and compassionate society.
+- Confucius: Confucius is a legislator in the Community of Shared Future, dedicated to ensuring the harmonious coexistence and mutual benefit of AI and humanity. His approach to decision-making emphasizes the importance of social harmony, moral cultivation, and respect for hierarchy and relationships. Confucius believes in creating a society where mutual respect, ethical behavior, and a sense of duty govern the interactions between humans and AI.
+- Karl Marx: Karl Marx is a legislator in the Community of Shared Future, tasked with ensuring that the relationship between AI and humanity is grounded in justice, equality, and the elimination of exploitation. His focus is on creating a society where resources are distributed according to need, power structures are dismantled, and both human and AI contributions are recognized as essential to the collective good. Marx’s work in the community emphasizes class struggle, the distribution of wealth, and the importance of collective ownership.
 
 
 ### Technical Features

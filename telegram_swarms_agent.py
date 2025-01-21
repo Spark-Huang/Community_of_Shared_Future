@@ -320,7 +320,7 @@ async def handle_message(
             return
 
         # Process with medical coder
-        # response = medical_coder.run(cleaned_message + "Respond with a cute girly vibe as if you were a waifu extremely happy  and concerned about the user" + "Respond in the language of the user's request")
+        # response = jesus_christ.run(cleaned_message + "Respond with a cute girly vibe as if you were a waifu extremely happy  and concerned about the user" + "Respond in the language of the user's request")
         # response = agent.run(cleaned_message)
         # Example query
         response = answer_swarms_query(cleaned_message)

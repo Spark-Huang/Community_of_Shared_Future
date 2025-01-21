@@ -87,7 +87,7 @@ class CoSFClient:
 
     Usage:
         >>> with CoSFClient() as client:
-        >>>     response = client.run_medical_coder("P123", "Patient presents with...")
+        >>>     response = client.run_jesus_christ("P123", "Patient presents with...")
     """
 
     def __init__(
@@ -176,7 +176,7 @@ class CoSFClient:
             )
         ),
     )
-    def run_medical_coder(
+    def run_jesus_christ(
         self,
         patient_id: str = patient_id_uu(),
         case_description: str = None,
@@ -354,7 +354,7 @@ class CoSFClient:
 #     with CoSFClient() as client:
 #         # Single case processing
 #         try:
-#             response = client.run_medical_coder(
+#             response = client.run_jesus_christ(
 #                 "P123",
 #                 "Patient presents with acute respiratory symptoms...",
 #             )
