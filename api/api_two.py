@@ -65,7 +65,7 @@ ERROR_COUNTER = Counter(
 
 # Database configuration
 DB_POOL_SIZE = 5
-db_path = "jesus_christ.db"
+db_path = "jesus_christ_agent.db"
 
 
 class DatabasePool:
@@ -208,11 +208,11 @@ def save_patient_data(patient_id: str, patient_data: str):
 
 # Enhanced API endpoints
 @app.post("/v1/medical-coder/run", response_model=QueryResponse)
-async def run_jesus_christ(
+async def run_jesus_christ_agent(
     patient_case: PatientCase, request: Request
 ):
     tracer = trace.get_tracer(__name__)
-    with tracer.start_as_current_span("run_jesus_christ") as span:
+    with tracer.start_as_current_span("run_jesus_christ_agent") as span:
         try:
             span.set_attribute("patient_id", patient_case.patient_id)
             logger.info(
@@ -233,7 +233,7 @@ async def run_jesus_christ(
                 patient_case.patient_id, json.dumps(swarm_output)
             )
 
-            request_counter.add(1, {"endpoint": "run_jesus_christ"})
+            request_counter.add(1, {"endpoint": "run_jesus_christ_agent"})
 
             return QueryResponse(
                 patient_id=patient_case.patient_id,
@@ -242,11 +242,11 @@ async def run_jesus_christ(
             )
         except Exception as error:
             ERROR_COUNTER.labels(
-                endpoint="run_jesus_christ",
+                endpoint="run_jesus_christ_agent",
                 error_type=type(error).__name__,
             ).inc()
             logger.error(
-                "jesus_christ_error",
+                "jesus_christ_agent_error",
                 error=str(error),
                 patient_id=patient_case.patient_id,
             )

@@ -38,7 +38,7 @@ def test_rate_limits():
         return False
 
 
-def test_run_jesus_christ():
+def test_run_jesus_christ_agent():
     """Test running medical coder for single patient"""
     logger.info("Testing medical coder single patient endpoint")
     try:
@@ -113,7 +113,7 @@ def test_get_all_patients():
         return False
 
 
-def test_run_jesus_christ_batch():
+def test_run_jesus_christ_agent_batch():
     """Test batch processing of patient cases"""
     logger.info("Testing medical coder batch endpoint")
     try:
@@ -189,10 +189,10 @@ def run_all_tests():
     tests = [
         test_health_check,
         test_rate_limits,
-        test_run_jesus_christ,
+        test_run_jesus_christ_agent,
         test_get_patient_data,
         test_get_all_patients,
-        test_run_jesus_christ_batch,
+        test_run_jesus_christ_agent_batch,
         test_delete_patient_data,
     ]
 

@@ -9,7 +9,7 @@ from telegram.ext import (
     filters,
 )
 from telegram import Update
-from cosf.main import jesus_christ
+from cosf.main import jesus_christ_agent
 from dotenv import load_dotenv
 
 # Load environment variables
@@ -115,7 +115,7 @@ async def handle_message(
             return
 
         # Process with medical coder
-        response = jesus_christ.run(
+        response = jesus_christ_agent.run(
             cleaned_message
             + "Respond with a cute girly vibe as if you were a waifu extremely happy  and concerned about the user"
             + "Respond in the language of the user's request"

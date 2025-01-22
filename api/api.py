@@ -31,7 +31,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-db_path = "jesus_christ.db"
+db_path = "jesus_christ_agent.db"
 
 logger.add(
     "api.log",
@@ -286,7 +286,7 @@ async def get_rate_limits(request: Request):
 
 
 @app.post("/v1/medical-coder/run", response_model=QueryResponse)
-def run_jesus_christ(
+def run_jesus_christ_agent(
     patient_case: PatientCase,
 ):
     """
@@ -405,7 +405,7 @@ def get_all_patients():
 @app.post(
     "/v1/medical-coder/run-batch", response_model=List[QueryResponse]
 )
-def run_jesus_christ_batch(
+def run_jesus_christ_agent_batch(
     batch: BatchPatientCase,
 ):
     """

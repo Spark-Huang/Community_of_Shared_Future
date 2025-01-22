@@ -11,7 +11,7 @@ from cosf.main import (
 )
 
 
-def test_jesus_christ_swarm_initialization():
+def test_jesus_christ_agent_swarm_initialization():
     """Test the initialization of CommunityOfSharedFuture"""
     try:
         # Set up test environment
@@ -196,7 +196,7 @@ def test_to_dict_serialization():
 def run_all_tests():
     """Run all test cases and report results"""
     test_results = {
-        "initialization": test_jesus_christ_swarm_initialization(),
+        "initialization": test_jesus_christ_agent_swarm_initialization(),
         "rag_api": test_rag_api(),
         "secure_data": test_secure_data_handler(),
         "swarm_run": test_swarm_run(),

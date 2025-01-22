@@ -1,4 +1,4 @@
-from cosf.main import jesus_christ
+from cosf.main import jesus_christ_agent
 
 
-print(jesus_christ.run("test"))
+print(jesus_christ_agent.run("test"))

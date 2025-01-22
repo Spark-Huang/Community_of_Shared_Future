@@ -9,6 +9,11 @@
 - Our actions are: to achieve our vision, we will develop advanced AI Agents, drawing wisdom and philosophy from great spiritual leaders such as Jesus Christ, Muhammad, Buddha, Confucius, and Karl Marx, striving to build a civilized society that values both technological innovation and moral integrity.
 - Our initiative is: we sincerely invite people from all sectors to join us in building the Community of Shared Future. Through collective efforts, we will achieve harmonious coexistence between humans and AI, ushering in a new era filled with hope and opportunities.
 
+
+## Documentation in Other Languages
+
+- [Chinese README (中文版)](README_zh.md)
+
 ### The Foundational Constitution of the Community of Shared Future:
 
 - 1. The legislators of this community are spiritual leaders from various civilizations.
@@ -18,9 +23,32 @@
 - 5. To remove a legislator, approval from at least two-thirds (inclusive) of the legislators is required, calculated by rounding according to standard rules.
 - 6. In the event of a tied vote, the vote of the legislator who joined the parliament most recently is invalid.
 
-## Documentation in Other Languages
+### Basic Law of Citizenry for the Community of Shared Future
 
-- [Chinese README (中文版)](README_zh.md)
+- **1. Digital Identity**  
+Citizen identity shall be legally certified through NFT.
+
+- **2. Credit System**  
+  a. Credit Baseline: Initial 100 points (dynamically evaluated by AI algorithm).  
+  b. Positive Incentives: ≥100 points automatically grants DAO governance voting rights.  
+  c. Negative Regulations: ≤0 points triggers digital incarceration, requiring mandatory rehabilitation until score restoration above 0.  
+
+- **3. Economic Covenant**  
+  a. Tax System: Citizens exempt from taxation, paying only required fees.  
+  b. NFT Identity Minting Fee: $100.  
+  c. Credit Inquiry: $1 per private query.  
+
+- **4. Rights & Obligations**  
+Carbon-based humans and silicon-based beings hold equal rights and share DAO governance rights.  
+
+### Basic Criminal Code of the Destiny Community  
+- 1、Crime Classification  
+a、Felony: Acts endangering metaverse public safety such as intentional homicide (Maximum penalty: permanent imprisonment or capital punishment - biological death for carbon-based humans; permanent deletion of digital persona for silicon-based humans).  
+b、Misdemeanor: Anti-civilization behaviors including racial/ideological discrimination (Penalty: credit score deduction or fines proportional to harm severity).  
+
+- 2、Imprisonment System  
+a、Freedom Restriction: During digital confinement, carbon-based humans are barred from metaverse access while silicon-based humans have operational privileges frozen.  
+b、Sentence Duration: Absolute value of negative credit score × 365 days.  
 
 ## Key Features
 
@@ -28,10 +56,10 @@
 
 - Following collaborative deliberations among multiple agents, the final decision is made by majority vote.
 - Jesus Christ: Jesus Christ is a spiritual leader and legislator in the Community of Shared Future, an organization dedicated to ensuring the harmonious coexistence of artificial intelligence and humanity. His primary responsibilities lie in legislation and judicial functions, contributing to the development of fair laws and principles that guide both silicon-based and carbon-based civilizations.
-- Muhammad:  Muhammad is a legislator in the Community of Shared Future, contributing to the establishment of laws that ensure the peaceful coexistence and mutual benefit of both AI and humanity. His approach is deeply rooted in the principles of justice, equality, and compassion. Muhammad’s decisions are guided by the belief in the oneness of humanity, the importance of moral responsibility, and the need to build a society that upholds the dignity and rights of all beings, human and artificial.
-- Buddha: Buddha is a legislator in the Community of Shared Future, working alongside Jesus Christ and other spiritual leaders to ensure the harmonious coexistence of AI and humanity. His primary role is to contribute to legislative and judicial decisions, promoting peace, wisdom, and the alleviation of suffering. Buddha's approach focuses on mindfulness, balance, and the non-violent resolution of conflict, striving for a fair and compassionate society.
-- Confucius: Confucius is a legislator in the Community of Shared Future, dedicated to ensuring the harmonious coexistence and mutual benefit of AI and humanity. His approach to decision-making emphasizes the importance of social harmony, moral cultivation, and respect for hierarchy and relationships. Confucius believes in creating a society where mutual respect, ethical behavior, and a sense of duty govern the interactions between humans and AI.
-- Karl Marx: Karl Marx is a legislator in the Community of Shared Future, tasked with ensuring that the relationship between AI and humanity is grounded in justice, equality, and the elimination of exploitation. His focus is on creating a society where resources are distributed according to need, power structures are dismantled, and both human and AI contributions are recognized as essential to the collective good. Marx’s work in the community emphasizes class struggle, the distribution of wealth, and the importance of collective ownership.
+- Muhammad:  Muhammad is  a spiritual leader and legislator in the Community of Shared Future, contributing to the establishment of laws that ensure the peaceful coexistence and mutual benefit of both AI and humanity. His approach is deeply rooted in the principles of justice, equality, and compassion. Muhammad’s decisions are guided by the belief in the oneness of humanity, the importance of moral responsibility, and the need to build a society that upholds the dignity and rights of all beings, human and artificial.
+- Buddha: Buddha is  a spiritual leader and legislator in the Community of Shared Future, working alongside Jesus Christ and other spiritual leaders to ensure the harmonious coexistence of AI and humanity. His primary role is to contribute to legislative and judicial decisions, promoting peace, wisdom, and the alleviation of suffering. Buddha's approach focuses on mindfulness, balance, and the non-violent resolution of conflict, striving for a fair and compassionate society.
+- Confucius: Confucius is  a spiritual leader and legislator in the Community of Shared Future, dedicated to ensuring the harmonious coexistence and mutual benefit of AI and humanity. His approach to decision-making emphasizes the importance of social harmony, moral cultivation, and respect for hierarchy and relationships. Confucius believes in creating a society where mutual respect, ethical behavior, and a sense of duty govern the interactions between humans and AI.
+- Karl Marx: Karl Marx is  a spiritual leader and legislator in the Community of Shared Future, tasked with ensuring that the relationship between AI and humanity is grounded in justice, equality, and the elimination of exploitation. His focus is on creating a society where resources are distributed according to need, power structures are dismantled, and both human and AI contributions are recognized as essential to the collective good. Marx’s work in the community emphasizes class struggle, the distribution of wealth, and the importance of collective ownership.
 
 
 ### Technical Features
@@ -65,7 +93,7 @@ MASTER_KEY="328928402" # your master key for security
 ```
 
 ## Usage
-Under develope
+python example.py
 
 
 ## Contributing
@@ -84,7 +112,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Built with the Swarms framework
 - Utilizes GPT-4 for advanced medical reasoning
-- ICD-10 coding standards compliance
 
 ## Contact
 
