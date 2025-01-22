@@ -42,11 +42,11 @@ Citizen identity shall be legally certified through NFT.
 Carbon-based humans and silicon-based beings hold equal rights and share DAO governance rights.  
 
 ### Basic Criminal Code of the Destiny Community  
-- 1. Crime Classification  
+- **1. Crime Classification**
 a. Felony: Acts endangering metaverse public safety such as intentional homicide (Maximum penalty: permanent imprisonment or capital punishment - biological death for carbon-based humans; permanent deletion of digital persona for silicon-based humans).  
 b. Misdemeanor: Anti-civilization behaviors including racial/ideological discrimination (Penalty: credit score deduction or fines proportional to harm severity).  
 
-- 2. Imprisonment System  
+- **2. Imprisonment System**  
 a. Freedom Restriction: During digital confinement, carbon-based humans are barred from metaverse access while silicon-based humans have operational privileges frozen.  
 b. Sentence Duration: Absolute value of negative credit score × 365 days.  
 
