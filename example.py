@@ -14,12 +14,17 @@ if __name__ == "__main__":
 
     Facts of the case:
     - Defrauding the AI digital person Luna   
+
+    Task: 
+    - Ask you to vote whether he is guilty or not
     """
 
     # Initialize the CommunityOfSharedFuture with the detailed patient case
     swarm = CommunityOfSharedFuture(
         patient_id="Patient-001",
         max_loops=1,
+        output_type="json",
+        patient_documentation="",
     )
 
     # Run the swarm on the patient case

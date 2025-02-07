@@ -17,12 +17,13 @@ from cosf.security import (
     secure_data,
 )
 
-model_name = "gpt-4o"
+model_name = "gpt-4o-mini"
 
 model = OpenAIChat(
     model_name=model_name,
     max_tokens=3000,
     openai_api_key=os.getenv("OPENAI_API_KEY"),
+    openai_api_base=os.getenv("PENAI_API_BASE"),
 )
 
 
