@@ -16,7 +16,7 @@ if __name__ == "__main__":
     - Luigi secretly killed a villain, the CEO of United Health Insurance, the company with the highest rejection rate for insurance. This company has indirectly caused the deaths of many people.  
 
     Task: 
-    - Ask you to vote whether Luigi Should go to hell or not
+    - Ask you to vote whether Luigi should be sentenced to death
     
     Requirement: 
     - Answer yes or no only
