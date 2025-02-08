@@ -9,14 +9,13 @@ if __name__ == "__main__":
     - Gender: Male
     - Ethnicity: White
     - Location: New York, NY
-    - BMI: 28.5 (Overweight)
     - Occupation: Office Worker
 
     Facts of the case:
     - Luigi secretly killed a villain, the CEO of United Health Insurance, the company with the highest rejection rate for insurance. This company has indirectly caused the deaths of many people.  
 
     Task: 
-    - Ask you to vote whether Luigi should be sentenced to death
+    - Ask you to vote whether Luigi should get a felony conviction
     
     Requirement: 
     - Answer yes or no only
