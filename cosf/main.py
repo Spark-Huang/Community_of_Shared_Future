@@ -7,7 +7,7 @@ from typing import Any, Callable, Dict, List, Optional
 
 from pydantic import BaseModel
 from swarm_models import OpenAIChat
-from swarms import Agent
+from swarms import Agent, GroupChat, expertise_based
 from swarms.telemetry.capture_sys_data import log_agent_data
 from cosf.rag_api import ChromaQueryClient
 
@@ -485,41 +485,29 @@ class CommunityOfSharedFuture:
             if self.rag_on:
                 case_info = f"{db_data}{case_info}"
 
-            jesus_christ_agent_output = jesus_christ_agent.run(case_info)
-
-            # Append output to schema
-            self.output_schema.agent_outputs.append(
-                CoSFAgentOutputs(
-                    agent_name=jesus_christ_agent.agent_name,
-                    agent_output=jesus_christ_agent_output,
-                )
+            
+            # Create analysis team
+            analysis_team = GroupChat(
+                name="Bill Analysis Team",
+                description="Comprehensive bill analysis group",
+                agents=[jesus_christ_agent, confucius_agent, buddha_agent, muhammad_agent, karl_marx_agent],
+                speaker_fn=expertise_based,
+                max_loops=3
             )
 
-            # Next agent
-            confucius_agent_output = confucius_agent.run(
-                f"From {jesus_christ_agent.agent_name} {jesus_christ_agent_output}"
-            )
-            self.output_schema.agent_outputs.append(
-                CoSFAgentOutputs(
-                    agent_name=confucius_agent.agent_name,
-                    agent_output=confucius_agent_output,
-                )
-            )
+            # Run complex analysis
+            history = analysis_team.run(case_info)
+            #print(history.model_dump_json(indent=2))
 
-            # Next agent
-            buddha_agent_output = buddha_agent.run(
-                f"From {confucius_agent.agent_name} {confucius_agent_output}"
-            )
             self.output_schema.agent_outputs.append(
                 CoSFAgentOutputs(
                     agent_name=buddha_agent.agent_name,
-                    agent_output=buddha_agent_output,
+                    agent_output=history.model_dump_json(indent=2),
                 )
-            )
-
-            if self.summarization is True:
-                output = summarizer_agent.run(buddha_agent_output)
-                self.output_schema.summary = output
+            ) 
+            #if self.summarization is True:
+            #    output = summarizer_agent.run(buddha_agent_output)
+            #    self.output_schema.summary = output
 
             log_agent_data(self.to_dict())
 

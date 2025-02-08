@@ -4,8 +4,8 @@ if __name__ == "__main__":
     # Extended Example Patient Case
     criminals_case = """
     Criminals Information:
-    - Name: John Doe
-    - Age: 45
+    - Name: Luigi
+    - Age: 35
     - Gender: Male
     - Ethnicity: White
     - Location: New York, NY
@@ -13,10 +13,13 @@ if __name__ == "__main__":
     - Occupation: Office Worker
 
     Facts of the case:
-    - Defrauding the AI digital person Luna   
+    - Luigi secretly killed a villain, the CEO of United Health Insurance, the company with the highest rejection rate for insurance. This company has indirectly caused the deaths of many people.  
 
     Task: 
-    - Ask you to vote whether he is guilty or not
+    - Ask you to vote whether Luigi Should go to hell or not
+    
+    Requirement: 
+    - Answer yes or no only
     """
 
     # Initialize the CommunityOfSharedFuture with the detailed patient case
