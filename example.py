@@ -15,10 +15,8 @@ if __name__ == "__main__":
     - Luigi secretly killed a villain, the CEO of United Health Insurance, the company with the highest rejection rate for insurance. This company has indirectly caused the deaths of many people.  
 
     Task: 
-    - Ask you to vote whether Luigi should get a felony conviction
-    
-    Requirement: 
-    - Answer yes or no only
+    - Ask you to vote how many years should Luigi spend in prison
+
     """
 
     # Initialize the CommunityOfSharedFuture with the detailed patient case
