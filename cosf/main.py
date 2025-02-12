@@ -9,6 +9,7 @@ from pydantic import BaseModel
 from swarm_models import OpenAIChat
 from swarms import Agent, GroupChat, expertise_based
 from swarms.telemetry.capture_sys_data import log_agent_data
+from swarms.structs.majority_voting import MajorityVoting
 from cosf.rag_api import ChromaQueryClient
 
 from cosf.security import (
@@ -485,6 +486,7 @@ class CommunityOfSharedFuture:
             if self.rag_on:
                 case_info = f"{db_data}{case_info}"
 
+            agents=[jesus_christ_agent, confucius_agent, buddha_agent, muhammad_agent, karl_marx_agent]
             
             # Create analysis team
             analysis_team = GroupChat(
@@ -496,13 +498,21 @@ class CommunityOfSharedFuture:
             )
 
             # Run complex analysis
-            history = analysis_team.run(case_info)
+            #history = analysis_team.run(case_info)
             #print(history.model_dump_json(indent=2))
+            
+            # Create MajorityVoting instance
+            majority_voting = MajorityVoting(agents)
+
+            # Run the majority voting system
+            result = majority_voting.run("What is the capital of France?")#case_info)
+            print(result)  # Output: 'Paris'
+
 
             self.output_schema.agent_outputs.append(
                 CoSFAgentOutputs(
                     agent_name=buddha_agent.agent_name,
-                    agent_output=history.model_dump_json(indent=2),
+                  #  agent_output=history.model_dump_json(indent=2),
                 )
             ) 
             #if self.summarization is True:
