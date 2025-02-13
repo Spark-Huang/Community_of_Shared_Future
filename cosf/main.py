@@ -486,13 +486,13 @@ class CommunityOfSharedFuture:
             if self.rag_on:
                 case_info = f"{db_data}{case_info}"
 
+          
             consensus_agent = Agent(
                 agent_name="Consensus-Agent",
                 agent_description="Consensus agent focused on analyzing investment advice",
                 system_prompt="You are a consensus agent focused on analyzing investment advice and providing a final answer.",
                 max_loops=1,
-                llm=model,
-                dynamic_temperature_enabled=True,
+                model_name="gpt-4o-mini"
             )
             
             agents=[jesus_christ_agent, confucius_agent, buddha_agent, muhammad_agent, karl_marx_agent]
@@ -523,14 +523,66 @@ class CommunityOfSharedFuture:
                 consensus_agent=consensus_agent
             )
             
-            result = majority_voting.run("What is the capital of France?")#case_info)
-            print(result)  # Output: 'Paris'
+            #result = majority_voting.run(task="What is the capital of France?")#case_info)
+            #print(result)  # Output: 'Paris'
 
+
+            #########################
+            # Initialize multiple agents with different specialties
+            agents = [
+                Agent(
+                    agent_name="Financial-Analysis-Agent",
+                    agent_description="Personal finance advisor focused on market analysis",
+                    system_prompt="You are a financial advisor specializing in market analysis and investment opportunities.",
+                    max_loops=1,
+                    model_name="gpt-4o-mini"
+                ),
+                Agent(
+                    agent_name="Risk-Assessment-Agent", 
+                    agent_description="Risk analysis and portfolio management expert",
+                    system_prompt="You are a risk assessment expert focused on evaluating investment risks and portfolio diversification.",
+                    max_loops=1,
+                    model_name="gpt-4o-mini"
+                ),
+                Agent(
+                    agent_name="Tech-Investment-Agent",
+                    agent_description="Technology sector investment specialist",
+                    system_prompt="You are a technology investment specialist focused on AI, emerging tech, and growth opportunities.",
+                    max_loops=1,
+                    model_name="gpt-4o-mini"
+                )
+            ]
+
+
+            consensus_agent = Agent(
+                agent_name="Consensus-Agent",
+                agent_description="Consensus agent focused on analyzing investment advice",
+                system_prompt="You are a consensus agent focused on analyzing investment advice and providing a final answer.",
+                max_loops=1,
+                model_name="gpt-4o-mini"
+            )
+
+            # Create majority voting system
+            majority_voting = MajorityVoting(
+                name="Investment-Advisory-System",
+                description="Multi-agent system for investment advice",
+                agents=agents,
+                verbose=True,
+                consensus_agent=consensus_agent
+            )
+
+            # Run the analysis with majority voting
+            result = majority_voting.run(
+                task="What is the capital of France?"
+            )
+
+            print(result)
+            #########################
 
             self.output_schema.agent_outputs.append(
                 CoSFAgentOutputs(
                     agent_name=buddha_agent.agent_name,
-                  #  agent_output=history.model_dump_json(indent=2),
+                    #agent_output=history.model_dump_json(indent=2),
                 )
             ) 
             #if self.summarization is True:
