@@ -486,6 +486,15 @@ class CommunityOfSharedFuture:
             if self.rag_on:
                 case_info = f"{db_data}{case_info}"
 
+            consensus_agent = Agent(
+                agent_name="Consensus-Agent",
+                agent_description="Consensus agent focused on analyzing investment advice",
+                system_prompt="You are a consensus agent focused on analyzing investment advice and providing a final answer.",
+                max_loops=1,
+                llm=model,
+                dynamic_temperature_enabled=True,
+            )
+            
             agents=[jesus_christ_agent, confucius_agent, buddha_agent, muhammad_agent, karl_marx_agent]
             
             # Create analysis team
@@ -505,6 +514,15 @@ class CommunityOfSharedFuture:
             majority_voting = MajorityVoting(agents)
 
             # Run the majority voting system
+
+            majority_voting = MajorityVoting(
+                name="Bill Analysis Team",
+                description="Comprehensive bill analysis group",
+                agents=agents,
+                verbose=True,
+                consensus_agent=consensus_agent
+            )
+            
             result = majority_voting.run("What is the capital of France?")#case_info)
             print(result)  # Output: 'Paris'
 
