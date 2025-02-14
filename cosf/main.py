@@ -8,7 +8,7 @@ from typing import Any, Callable, Dict, List, Optional
 from pydantic import BaseModel
 from swarm_models import OpenAIChat
 from swarms import Agent, GroupChat, expertise_based
-from swarms.telemetry.capture_sys_data import log_agent_data
+#from swarms.telemetry.capture_sys_data import log_agent_data
 from swarms.structs.majority_voting import MajorityVoting
 from cosf.rag_api import ChromaQueryClient
 
@@ -476,7 +476,7 @@ class CommunityOfSharedFuture:
         print("Running the medical coding and diagnosis system.")
 
         try:
-            log_agent_data(self.to_dict())
+            #log_agent_data(self.to_dict())
 
             if self.rag_on is True:
                 db_data = self.rag_query(task)
@@ -487,97 +487,46 @@ class CommunityOfSharedFuture:
                 case_info = f"{db_data}{case_info}"
 
           
-            consensus_agent = Agent(
-                agent_name="Consensus-Agent",
-                agent_description="Consensus agent focused on analyzing investment advice",
-                system_prompt="You are a consensus agent focused on analyzing investment advice and providing a final answer.",
-                max_loops=1,
-                model_name="gpt-4o-mini"
-            )
+            #consensus_agent = Agent(
+            #    agent_name="Consensus-Agent",
+            #    agent_description="Consensus agent focused on analyzing investment advice",
+            #    system_prompt="You are a consensus agent focused on analyzing investment advice and providing a final answer.",
+            #    max_loops=1,
+            #    model_name="gpt-4o-mini"
+            #)
             
-            agents=[jesus_christ_agent, confucius_agent, buddha_agent, muhammad_agent, karl_marx_agent]
+            #agents=[jesus_christ_agent, confucius_agent, buddha_agent, muhammad_agent, karl_marx_agent]
             
             # Create analysis team
             analysis_team = GroupChat(
                 name="Bill Analysis Team",
                 description="Comprehensive bill analysis group",
-                agents=[jesus_christ_agent, confucius_agent, buddha_agent, muhammad_agent, karl_marx_agent],
+                agents=[jesus_christ_agent, confucius_agent, buddha_agent],
                 speaker_fn=expertise_based,
                 max_loops=3
             )
 
             # Run complex analysis
-            #history = analysis_team.run(case_info)
-            #print(history.model_dump_json(indent=2))
+            history = analysis_team.run("Was human nature originally good or evil?")
+            print(history.model_dump_json(indent=2))
             
             # Create MajorityVoting instance
-            majority_voting = MajorityVoting(agents)
+            #majority_voting = MajorityVoting(agents)
 
             # Run the majority voting system
 
-            majority_voting = MajorityVoting(
-                name="Bill Analysis Team",
-                description="Comprehensive bill analysis group",
-                agents=agents,
-                verbose=True,
-                consensus_agent=consensus_agent
-            )
+            #majority_voting = MajorityVoting(
+            #    name="Bill Analysis Team",
+            #    description="Comprehensive bill analysis group",
+            #    agents=agents,
+            #    verbose=True,
+            #    consensus_agent=consensus_agent
+            #)
             
-            #result = majority_voting.run(task="What is the capital of France?")#case_info)
-            #print(result)  # Output: 'Paris'
-
-
-            #########################
-            # Initialize multiple agents with different specialties
-            agents = [
-                Agent(
-                    agent_name="Financial-Analysis-Agent",
-                    agent_description="Personal finance advisor focused on market analysis",
-                    system_prompt="You are a financial advisor specializing in market analysis and investment opportunities.",
-                    max_loops=1,
-                    model_name="gpt-4o-mini"
-                ),
-                Agent(
-                    agent_name="Risk-Assessment-Agent", 
-                    agent_description="Risk analysis and portfolio management expert",
-                    system_prompt="You are a risk assessment expert focused on evaluating investment risks and portfolio diversification.",
-                    max_loops=1,
-                    model_name="gpt-4o-mini"
-                ),
-                Agent(
-                    agent_name="Tech-Investment-Agent",
-                    agent_description="Technology sector investment specialist",
-                    system_prompt="You are a technology investment specialist focused on AI, emerging tech, and growth opportunities.",
-                    max_loops=1,
-                    model_name="gpt-4o-mini"
-                )
-            ]
-
-
-            consensus_agent = Agent(
-                agent_name="Consensus-Agent",
-                agent_description="Consensus agent focused on analyzing investment advice",
-                system_prompt="You are a consensus agent focused on analyzing investment advice and providing a final answer.",
-                max_loops=1,
-                model_name="gpt-4o-mini"
-            )
-
-            # Create majority voting system
-            majority_voting = MajorityVoting(
-                name="Investment-Advisory-System",
-                description="Multi-agent system for investment advice",
-                agents=agents,
-                verbose=True,
-                consensus_agent=consensus_agent
-            )
-
-            # Run the analysis with majority voting
-            result = majority_voting.run(
-                task="What is the capital of France?"
-            )
-
-            print(result)
-            #########################
+            #result = majority_voting.run(
+            #    task=case_info,
+            #    correct_answer=""  # Optional evaluation metric
+            #)
 
             self.output_schema.agent_outputs.append(
                 CoSFAgentOutputs(
@@ -589,12 +538,12 @@ class CommunityOfSharedFuture:
             #    output = summarizer_agent.run(buddha_agent_output)
             #    self.output_schema.summary = output
 
-            log_agent_data(self.to_dict())
+            #log_agent_data(self.to_dict())
 
             return self.output_schema
 
         except Exception as e:
-            log_agent_data(self.to_dict())
+            #log_agent_data(self.to_dict())
             print(
                 f"An error occurred during the diagnosis process: {e}"
             )
@@ -603,7 +552,7 @@ class CommunityOfSharedFuture:
         try:
             return self._run(task, img, *args, **kwargs)
         except Exception as e:
-            log_agent_data(self.to_dict())
+            #log_agent_data(self.to_dict())
             print(
                 f"An error occurred during the diagnosis process: {e}"
             )
@@ -621,7 +570,7 @@ class CommunityOfSharedFuture:
 
         try:
             # Log the current state of the system for traceability
-            log_agent_data(self.to_dict())
+            #log_agent_data(self.to_dict())
 
             # Prepare case information
             case_info = {
@@ -673,7 +622,7 @@ class CommunityOfSharedFuture:
 
         except Exception as e:
             # Log the current state and error
-            log_agent_data(self.to_dict())
+            #log_agent_data(self.to_dict())
             print(f"An error occurred during the secure run: {e}")
             return "An error occurred during the diagnosis process. Please check the logs for more information."
 
