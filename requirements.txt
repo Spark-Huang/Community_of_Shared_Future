@@ -3,6 +3,6 @@ loguru
 swarm-models
 cryptography
 python-dotenv
-pkg_resources
+#pkg_resources
 setuptools
 swarms-tools
