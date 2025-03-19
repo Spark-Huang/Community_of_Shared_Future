@@ -113,7 +113,7 @@ python example.py
 ## 致谢
 
 - 使用Swarms框架构建
-- 利用GPT-4进行高级推理
+- 利用LLM进行高级推理
 
 ## 联系
 

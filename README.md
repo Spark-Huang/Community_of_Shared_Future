@@ -111,7 +111,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 
 - Built with the Swarms framework
-- Utilizes GPT-4 for advanced medical reasoning
+- Utilizes LLM for advanced reasoning
 
 ## Contact
 
